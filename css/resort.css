@@ -119,3 +119,21 @@
     line-height: 1.6;
     font-size: 15px;
 }
+.thrilliopia-btn {
+  display: inline-block;
+  background-color: #f05454; /* Thrilliopia brand color */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(240, 84, 84, 0.3);
+}
+
+.thrilliopia-btn:hover {
+  background-color: #d84343;
+  box-shadow: 0 6px 15px rgba(240, 84, 84, 0.5);
+  transform: translateY(-2px);
+}
