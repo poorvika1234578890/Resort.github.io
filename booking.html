@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #81c784, #4caf50);
+      background: linear-gradient(135deg, #a8edea, #fed6e3); /* pastel turquoise to peach gradient */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,10 +16,10 @@
     }
 
     .form-container {
-      background: #fff;
+      background: #ffffff;
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
       width: 380px;
       animation: fadeIn 0.8s ease;
     }
@@ -31,52 +31,58 @@
 
     h2 {
       text-align: center;
-      color: #4caf50;
+      color: #009688; /* teal - tropical ocean tone */
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
     label {
       font-weight: 500;
       display: block;
       margin-bottom: 6px;
-      color: #333;
+      color: #444;
     }
 
     input, textarea, select {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       font-size: 14px;
       transition: 0.2s;
+      background-color: #f9f9f9;
     }
 
     input:focus, textarea:focus, select:focus {
-      border-color: #4caf50;
+      border-color: #009688;
+      background-color: #fff;
       outline: none;
+      box-shadow: 0 0 5px rgba(0, 150, 136, 0.3);
     }
 
     button {
       width: 100%;
-      background-color: #4caf50;
+      background-color: #009688;
       color: white;
       border: none;
       padding: 12px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 1em;
       cursor: pointer;
       transition: 0.3s;
+      font-weight: 500;
     }
 
     button:hover {
-      background-color: #43a047;
+      background-color: #00796b; /* darker teal for hover */
+      transform: scale(1.03);
     }
 
     .success-message {
       display: none;
       text-align: center;
-      color: #4caf50;
+      color: #00796b;
       margin-top: 15px;
       font-weight: 600;
     }
@@ -86,7 +92,6 @@
 <body>
   <div class="form-container">
     <h2>Resort Booking</h2>
-    <!-- Single form only -->
     <form name="submit-to-google-sheet" id="bookingForm">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
@@ -121,7 +126,6 @@
   </div>
 
   <script>
-    // ✅ Use only one script, matching your Google Apps Script URL
     const scriptURL = 'https://script.google.com/macros/s/AKfycbziTml8StEdIxAs_EXheqDcJjA3qMA4j65hh52W8GusYcfDpzTyvXkBTz6J7VnHHI-1/exec';
     const form = document.forms['submit-to-google-sheet'];
     const successMsg = document.getElementById("successMessage");
@@ -145,6 +149,4 @@
     });
   </script>
 </body>
-</html>
-
 </html>
